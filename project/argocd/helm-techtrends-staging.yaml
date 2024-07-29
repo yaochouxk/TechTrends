@@ -15,4 +15,3 @@ spec:
     path: project/helm
     repoURL: https://github.com/yaochouxk/techtrends
     targetRevision: HEAD
-    syncPolicy: {}
