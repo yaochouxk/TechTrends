@@ -2,13 +2,13 @@ FROM python:3.8
 
 WORKDIR /app
 
-COPY ./techtrends/requirements.txt ./
+COPY ./project/techtrends/requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-COPY ./techtrends ./
+COPY ./project/techtrends ./
 
-RUN python init_db.py
+RUN python ./project/init_db.py
 
 EXPOSE 3111
 
