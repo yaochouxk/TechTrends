@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: ./project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
           tags: yaochouxk/techtrends:latest
