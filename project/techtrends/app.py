@@ -29,7 +29,7 @@ app.config['SECRET_KEY'] = 'your secret key'
 @app.route('/healthz')
 def healthz():
     response = app.response_class(
-        response=json.dumps({"results":"OK - healthy"}),
+        response=json.dumps({"results":"OK - 123 healthy"}),
         status=200,
         mimetype='application/json'
     )
@@ -38,15 +38,16 @@ def healthz():
 @app.route('/metrics')
 def metrics():
     connection = get_db_connection()
-    posts = connection.execute('SELECT * FROM posts').fetchall()
-    connection.close()
-    post_count = lens(posts)
-
+    #posts = connection.execute('SELECT * FROM posts').fetchall()
+    #post_count = lens(posts)
+    post_count = connection.execute('SELECT Count(*) FROM posts').fetchone()[0]
     response = app.response_class(
             response=json.dumps({"post_count":post_count,"db_connection_count":db_connection_count}),
+            #response=json.dumps({"post_count":0,"db_connection_count":0}),
             status=200,
             mimetype='application/json'
     )
+    connection.close()
     return response
  
 
@@ -101,6 +102,17 @@ def create():
     return render_template('create.html')
 
 # start the application on port 3111
-if __name__ == "__main__":
-    logging.basicConfig(filename='app.log',level=logging.DEBUG)
+#if __name__ == "__main__":
+#    logging.basicConfig(filename='app.log',level=logging.DEBUG)
+#    app.run(host='0.0.0.0', port='3111')
+
+if __name__ == "__main__": 
+    #stream logs to a file 
+    import sys 
+    file_handler = logging.FileHandler(filename='app.log') 
+    stdout_handler = logging.StreamHandler(sys.stdout) 
+    stderr_handler = logging.StreamHandler(sys.stderr) 
+    handlers = [file_handler, stdout_handler,stderr_handler] 
+    logging.basicConfig(level=logging.DEBUG, format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s', handlers=handlers) 
     app.run(host='0.0.0.0', port='3111')
+

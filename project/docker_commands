@@ -1,11 +1,62 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs stupefied_chebyshev
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+[2024-07-29 05:03:48,073] {_internal.py:225} WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2024-07-29 05:03:48,073] {_internal.py:225} WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2024-07-29 05:03:48,073] {_internal.py:225} INFO -  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+[2024-07-29 05:03:48,073] {_internal.py:225} INFO -  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+[2024-07-29 05:03:55,497] {app.py:62} INFO - Main request successfull
+[2024-07-29 05:03:55,497] {app.py:62} INFO - Main request successfull
+[2024-07-29 05:03:55,505] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:03:55] "GET / HTTP/1.1" 200 -
+[2024-07-29 05:03:55,505] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:03:55] "GET / HTTP/1.1" 200 -
+[2024-07-29 05:03:55,626] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:03:55] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:03:55,626] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:03:55] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:00,751] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:00] "GET /metrics HTTP/1.1" 200 -
+[2024-07-29 05:04:00,751] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:00] "GET /metrics HTTP/1.1" 200 -
+[2024-07-29 05:04:11,950] {app.py:81} INFO - the About Us page is retrievd
+[2024-07-29 05:04:11,950] {app.py:81} INFO - the About Us page is retrievd
+[2024-07-29 05:04:11,952] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:11] "GET /about HTTP/1.1" 200 -
+[2024-07-29 05:04:11,952] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:11] "GET /about HTTP/1.1" 200 -
+[2024-07-29 05:04:12,527] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:12] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:12,527] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:12] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:16,038] {app.py:62} INFO - Main request successfull
+[2024-07-29 05:04:16,038] {app.py:62} INFO - Main request successfull
+[2024-07-29 05:04:16,039] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:16] "GET / HTTP/1.1" 200 -
+[2024-07-29 05:04:16,039] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:16] "GET / HTTP/1.1" 200 -
+[2024-07-29 05:04:16,090] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:16] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:16,090] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:16] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:17,912] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:17] "GET /create HTTP/1.1" 200 -
+[2024-07-29 05:04:17,912] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:17] "GET /create HTTP/1.1" 200 -
+[2024-07-29 05:04:18,271] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:18] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:18,271] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:18] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:21,757] {app.py:99} INFO - New artical test is created
+[2024-07-29 05:04:21,757] {app.py:99} INFO - New artical test is created
+[2024-07-29 05:04:21,758] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:21] "POST /create HTTP/1.1" 302 -
+[2024-07-29 05:04:21,758] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:21] "POST /create HTTP/1.1" 302 -
+[2024-07-29 05:04:22,410] {app.py:62} INFO - Main request successfull
+[2024-07-29 05:04:22,410] {app.py:62} INFO - Main request successfull
+[2024-07-29 05:04:22,411] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:22] "GET / HTTP/1.1" 200 -
+[2024-07-29 05:04:22,411] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:22] "GET / HTTP/1.1" 200 -
+[2024-07-29 05:04:22,535] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:22] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:04:22,535] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:04:22] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:05:18,938] {app.py:75} INFO - The article CNCF Cloud Native Definition v1.0 is retrived!
+[2024-07-29 05:05:18,938] {app.py:75} INFO - The article CNCF Cloud Native Definition v1.0 is retrived!
+[2024-07-29 05:05:18,941] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:05:18] "GET /5 HTTP/1.1" 200 -
+[2024-07-29 05:05:18,941] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:05:18] "GET /5 HTTP/1.1" 200 -
+[2024-07-29 05:05:19,041] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:05:19] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-07-29 05:05:19,041] {_internal.py:225} INFO - 172.17.0.1 - - [29/Jul/2024 05:05:19] "GET /static/css/main.css HTTP/1.1" 304 -
