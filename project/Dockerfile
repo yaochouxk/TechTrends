@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 COPY ./project/techtrends ./
 
-RUN python ./project/init_db.py
+RUN python init_db.py
 
 EXPOSE 3111
 
